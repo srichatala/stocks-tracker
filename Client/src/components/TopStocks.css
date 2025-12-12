@@ -1,0 +1,125 @@
+.top-stocks-container {
+    background-color: var(--surface-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.top-stocks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+.country-selector {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.country-select {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.stocks-table-wrapper {
+    overflow-x: auto;
+}
+
+.stocks-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.stocks-table th {
+    text-align: left;
+    padding: 1rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.stocks-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.clickable-row {
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.clickable-row:hover {
+    background-color: var(--surface-hover);
+}
+
+.selected-row {
+    background-color: rgba(16, 185, 129, 0.1);
+    /* Emerald tint */
+    border-left: 3px solid var(--accent-color);
+}
+
+.symbol-cell {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.positive-change {
+    color: var(--accent-color);
+}
+
+.negative-change {
+    color: var(--error-color);
+}
+
+.analyze-btn {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--primary-color);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.clickable-row:hover .analyze-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.loading-state {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+}
+
+.error-message {
+    color: #fca5a5;
+    background-color: rgba(239, 68, 68, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--error-color);
+}
